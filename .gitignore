@@ -1,0 +1,6 @@
+# Archivos originales pesados (ya están optimizados en assets/media/)
+IMG_3025.mov
+*.pptx
+.DS_Store
+.vercel
+
