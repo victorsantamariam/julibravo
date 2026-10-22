@@ -463,6 +463,140 @@
       color: var(--text-champagne);
     }
 
+    /* Slide 9: Dinámica Sensibilizadora "Mi Llave, Mi Decisión" */
+    .dinamica-stage {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 42% 58%;
+      align-items: center;
+      padding: clamp(1.8rem, 4vh, 3.5rem) clamp(2.5rem, 5vw, 5.5rem);
+      gap: clamp(2rem, 3.5vw, 4rem);
+    }
+
+    .dinamica-card-showcase {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .dinamica-card-glow {
+      position: absolute;
+      width: 85%;
+      height: 85%;
+      background: radial-gradient(circle, rgba(229, 195, 132, 0.28) 0%, rgba(198, 164, 106, 0.06) 55%, transparent 75%);
+      filter: blur(28px);
+      pointer-events: none;
+    }
+
+    .dinamica-card-img {
+      position: relative;
+      z-index: 2;
+      max-height: 84vh;
+      max-width: 100%;
+      width: auto;
+      border-radius: 18px;
+      border: 2px solid rgba(229, 195, 132, 0.45);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.75), 0 0 40px rgba(198, 164, 106, 0.18);
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .dinamica-card-img:hover {
+      transform: scale(1.025);
+    }
+
+    .dinamica-guide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(0.75rem, 1.5vh, 1.25rem);
+    }
+
+    .dinamica-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      align-self: flex-start;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      background: rgba(198, 164, 106, 0.14);
+      border: 1px solid rgba(198, 164, 106, 0.38);
+      color: var(--gold-bright);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .dinamica-steps {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.6rem, 1.2vh, 1rem);
+    }
+
+    .dinamica-step-item {
+      background: linear-gradient(135deg, rgba(36, 33, 30, 0.82) 0%, rgba(22, 19, 17, 0.9) 100%);
+      border: 1px solid rgba(198, 164, 106, 0.22);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: clamp(0.75rem, 1.4vh, 1.15rem) clamp(1.1rem, 1.8vw, 1.5rem);
+      backdrop-filter: blur(10px);
+    }
+
+    .dinamica-step-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 1.75vw, 1.6rem);
+      font-weight: 600;
+      color: var(--gold-bright);
+      margin-bottom: 0.2rem;
+    }
+
+    .dinamica-step-question {
+      font-size: clamp(0.95rem, 1.25vw, 1.18rem);
+      color: var(--text-ivory);
+      line-height: 1.4;
+      opacity: 0.95;
+    }
+
+    .dinamica-commitment-box {
+      background: linear-gradient(135deg, rgba(198, 164, 106, 0.18) 0%, rgba(118, 84, 62, 0.22) 100%);
+      border: 1px solid var(--gold);
+      border-radius: 14px;
+      padding: clamp(0.9rem, 1.6vh, 1.35rem) clamp(1.2rem, 2vw, 1.75rem);
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .dinamica-commitment-label {
+      font-size: clamp(0.85rem, 1.1vw, 1rem);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold-bright);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .dinamica-commitment-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.2rem, 1.75vw, 1.65rem);
+      color: var(--text-ivory);
+      line-height: 1.35;
+    }
+
+    .dinamica-footer-motto {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.15rem, 1.55vw, 1.45rem);
+      color: var(--text-champagne);
+      text-align: center;
+      margin-top: 0.2rem;
+    }
+
     /* VIDEO SLIDE (After Slide 5, Before Slide 6) */
     .video-slide-stage {
       position: relative;
@@ -694,6 +828,13 @@
         max-width: 480px;
         overflow-y: auto;
       }
+      .dinamica-stage {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+      }
+      .dinamica-card-img {
+        max-height: 42vh;
+      }
     }
   </style>
 </head>
@@ -900,8 +1041,56 @@ Lo que hay aqui puede abrir puertas pero tambien puede dejarnos encerrados en el
       </div>
     </section>
 
-    <!-- DIAPOSITIVA 9 -->
-    <section class="slide" data-step="9" data-stage="O — OVACIÓN (Cierre final) · Palabra clave: conmigo" data-notes="Salgan de esta sala sabiendo que la llave nunca estuvo afuera. Estuvo con ustedes todo el tiempo. La pregunta con la que cerramos no es qué va a pasar afuera, sino: ¿Qué actitud voy a transformar desde hoy? Muchas gracias." data-tip="Mirar a los ojos a la audiencia, hacer una pausa tras la frase final y recibir el aplauso de cierre.">
+    <!-- DIAPOSITIVA 9: ÚLTIMA DINÁMICA SENSIBILIZADORA -->
+    <section class="slide" data-step="9" data-stage="O — OVACIÓN (Dinámica de Compromiso) · Mi Llave, Mi Decisión" data-notes="Invitar a cada participante a tomar su tarjeta 'Mi llave, mi decisión' y regalarse unos minutos de honestidad consigo mismo para escribir qué decide soltar del pasado, cuál es su compromiso hoy y qué puerta quiere abrir hacia su futuro." data-tip="">
+      <div class="dinamica-stage">
+        <div class="dinamica-card-showcase anim d-1">
+          <div class="dinamica-card-glow"></div>
+          <img class="dinamica-card-img" src="assets/media/dinamica_llave.png" alt="Mi llave, mi decisión" />
+        </div>
+
+        <div class="dinamica-guide">
+          <span class="dinamica-badge anim d-1">🗝️ Dinámica Personal de Cierre</span>
+          <div class="anim d-1">
+            <h2 class="title-section" style="font-size: clamp(2rem, 3.4vw, 3.4rem);">MI LLAVE, MI DECISIÓN</h2>
+            <p class="subtitle-lead" style="font-size: clamp(1rem, 1.35vw, 1.3rem); margin-top: 0.25rem;">
+              La actitud abre puertas que el talento por sí solo no puede abrir.
+            </p>
+          </div>
+
+          <div class="dinamica-steps">
+            <div class="dinamica-step-item anim d-2">
+              <div class="dinamica-step-title">1. PASADO · Lo que decido soltar</div>
+              <div class="dinamica-step-question">¿Qué actitud o reacción ya no quiero seguir repitiendo?</div>
+            </div>
+
+            <div class="dinamica-step-item anim d-3">
+              <div class="dinamica-step-title">2. PRESENTE · Mi compromiso desde hoy</div>
+              <div class="dinamica-step-question">¿Qué actitud voy a empezar a practicar y ante qué situación?</div>
+            </div>
+
+            <div class="dinamica-step-item anim d-4">
+              <div class="dinamica-step-title">3. FUTURO · La puerta que quiero abrir</div>
+              <div class="dinamica-step-question">¿Qué quiero mejorar en mi vida personal o profesional con ese cambio?</div>
+            </div>
+          </div>
+
+          <div class="dinamica-commitment-box anim d-5">
+            <div class="dinamica-commitment-label">Mi compromiso conmigo:</div>
+            <div class="dinamica-commitment-quote">
+              “A partir de hoy, cuando ______________, me comprometo a ______________”.
+            </div>
+          </div>
+
+          <p class="dinamica-footer-motto anim d-5">
+            Mi actitud es mi decisión. El cambio comienza hoy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIAPOSITIVA 10 (CIERRE FINAL) -->
+    <section class="slide" data-step="10" data-stage="O — OVACIÓN (Cierre final) · Palabra clave: conmigo" data-notes="Salgan de esta sala sabiendo que la llave nunca estuvo afuera. Estuvo con ustedes todo el tiempo. La pregunta con la que cerramos no es qué va a pasar afuera, sino: ¿Qué actitud voy a transformar desde hoy? Muchas gracias." data-tip="Mirar a los ojos a la audiencia, hacer una pausa tras la frase final y recibir el aplauso de cierre.">
       <div class="bg-full" style="background-image: url('assets/media/image4.jpeg');"></div>
       <div class="slide-9-overlay"></div>
       <div class="content-pane" style="width: 100%; align-items: center; text-align: center; z-index: 3;">
@@ -912,6 +1101,11 @@ Lo que hay aqui puede abrir puertas pero tambien puede dejarnos encerrados en el
         <p class="subtitle-lead anim d-3" style="font-size: clamp(1.35rem, 2.3vw, 2.2rem); color: var(--gold-bright);">
           ¿Qué actitud voy a transformar desde hoy?
         </p>
+        <div class="glass-card anim d-4" style="max-width: 920px; border-left: 1px solid var(--gold-dim); border-top: 3px solid var(--gold); text-align: center; margin-top: clamp(1.5rem, 3vh, 2.5rem);">
+          <p style="font-family: var(--font-serif); font-style: italic; font-size: clamp(1.25rem, 2vw, 1.85rem); line-height: 1.5; color: var(--text-ivory);">
+            "Salgan de esta sala sabiendo que la llave nunca estuvo afuera. Estuvo con ustedes todo el tiempo. La pregunta con la que cerramos no es qué va a pasar afuera, sino: ¿Qué actitud voy a transformar desde hoy? Muchas gracias."
+          </p>
+        </div>
       </div>
     </section>
 
@@ -927,7 +1121,7 @@ Lo que hay aqui puede abrir puertas pero tambien puede dejarnos encerrados en el
   <!-- Discreet Bottom-Right Controls -->
   <nav class="deck-controls" id="deck-controls">
     <button class="ctrl-icon-btn" id="btn-prev" title="Anterior (Flecha Izquierda)">❮</button>
-    <span class="slide-counter" id="slide-counter">1 / 9</span>
+    <span class="slide-counter" id="slide-counter">1 / 10</span>
     <button class="ctrl-icon-btn" id="btn-next" title="Siguiente (Clic o Flecha Derecha)">❯</button>
     <button class="ctrl-icon-btn" id="btn-notes" title="Guion técnica BRAVO (Tecla N)">📝</button>
     <button class="ctrl-icon-btn" id="btn-fullscreen" title="Pantalla Completa (Tecla F)">⛶</button>
@@ -966,7 +1160,7 @@ Lo que hay aqui puede abrir puertas pero tambien puede dejarnos encerrados en el
 
         const currentSlide = slides[currentIndex];
         const stepAttr = currentSlide.getAttribute('data-step');
-        slideCounter.textContent = stepAttr === 'video' ? '🎬 VIDEO' : `${stepAttr} / 9`;
+        slideCounter.textContent = stepAttr === 'video' ? '🎬 VIDEO' : `${stepAttr} / 10`;
 
         // Update BRAVO speaker notes drawer
         notesStage.textContent = currentSlide.getAttribute('data-stage') || '';
